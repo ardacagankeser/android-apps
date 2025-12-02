@@ -1,0 +1,56 @@
+# Derleme çıktıları
+build/
+.gradle/
+**/build/
+!libs/build/
+!src/main/build/
+
+# Gradle önbellekleri ve yerel ayarlar
+local.properties
+.gradle
+tmp/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# IDE ayar dosyaları
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# İmzalama Anahtarları
+*.jks
+*.keystore
+*.pem
+*.p12
+*.key
+
+# Firebase ve Google Servis ayarları
+google-services.json
+GoogleService-Info.plist
+
+# Android Profiler
+*.hprof
+captures/
+
+# NDK (C++ ile çalışırsan)
+.externalNativeBuild
+.cxx/
+obj/
+
+# Mac
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# APK ve Bundle dosyaları
+*.apk
+*.aab
+*.ap_
