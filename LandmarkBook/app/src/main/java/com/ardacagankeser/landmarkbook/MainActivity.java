@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 public class MainActivity extends AppCompatActivity {
     ArrayList<Landmark> landmarks;
     private ActivityMainBinding binding;
+    // static Landmark chosenLandmark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

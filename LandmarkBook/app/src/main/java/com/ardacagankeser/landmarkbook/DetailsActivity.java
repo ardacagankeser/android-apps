@@ -1,6 +1,5 @@
 package com.ardacagankeser.landmarkbook;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -30,8 +29,11 @@ public class DetailsActivity extends AppCompatActivity {
             return insets;
         });
 
-        Intent intent = getIntent();
-        Landmark selectedLandmark = (Landmark)intent.getSerializableExtra("landmark");
+        // Intent intent = getIntent();
+        // Landmark selectedLandmark = (Landmark)intent.getSerializableExtra("landmark");
+        // Landmark selectedLandmark = chosenLandmark;
+        Singleton singleton = Singleton.getInstance();
+        Landmark selectedLandmark = singleton.getSelectedLandmark();
         binding.nameText.setText(selectedLandmark.name);
         binding.countryText.setText(selectedLandmark.country);
         binding.imageView.setImageResource(selectedLandmark.image);
