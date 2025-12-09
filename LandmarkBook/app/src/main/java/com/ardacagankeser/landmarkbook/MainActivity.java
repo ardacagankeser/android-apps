@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.ardacagankeser.landmarkbook.databinding.ActivityDetailsBinding;
 import com.ardacagankeser.landmarkbook.databinding.ActivityMainBinding;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         landmarks.add(eiffel);
         landmarks.add(colosseum);
         landmarks.add(londonBridge);
-
+        /*
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,
                 landmarks.stream().map(landmark -> landmark.name).collect(Collectors.toList())
         );
@@ -63,5 +64,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        */
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LandmarkAdapter landmarkAdapter = new LandmarkAdapter(landmarks);
+        binding.recyclerView.setAdapter(landmarkAdapter);
     }
 }
